@@ -19,7 +19,7 @@ public class MyTest {
 ]]
 
 describe("deploy_start", function()
-	local sf = require("sf")
+	local sf = require("salesforcedx")
 
 	before_each(function()
 		create_buffer_with_content(test_class)

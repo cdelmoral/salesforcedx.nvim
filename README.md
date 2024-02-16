@@ -1,4 +1,4 @@
-# sf.nvim
+# salesforcedx.nvim
 
 ## High Priority
 
@@ -17,11 +17,3 @@
 
 - [ ] Run apex test suite
 - [ ] Retrieve remote changes from org
-
-## Possible names
-
-- sf.nvim
-- salesforce.nvim
-- sfdx.nvim
-- sf_cli.nvim
-- salesforcedx.nvim

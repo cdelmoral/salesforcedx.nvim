@@ -1,7 +1,7 @@
 local ts_utils = require("nvim-treesitter.ts_utils")
-local apex = require("sf.apex")
-local utils = require("sf.utils")
-local salesforce = require("sf.salesforce")
+local apex = require("salesforcedx.apex")
+local utils = require("salesforcedx.utils")
+local salesforce = require("salesforcedx.salesforce")
 
 M = {}
 
@@ -59,9 +59,9 @@ M.deploy_start = function()
 end
 
 M.setup = function()
-	vim.api.nvim_command("command! TestMethod lua require'sf'.execute_test_method()<CR>")
-	vim.api.nvim_command("command! TestClass lua require'sf'.execute_test_class()<CR>")
-	vim.api.nvim_command("command! Deploy lua require'sf'.deploy_start()<CR>")
+	vim.api.nvim_command("command! TestMethod lua require'salesforcedx'.execute_test_method()<CR>")
+	vim.api.nvim_command("command! TestClass lua require'salesforcedx'.execute_test_class()<CR>")
+	vim.api.nvim_command("command! Deploy lua require'salesforcedx'.deploy_start()<CR>")
 end
 
 return M

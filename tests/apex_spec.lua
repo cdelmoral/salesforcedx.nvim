@@ -16,7 +16,7 @@ public class MyTest {
 ]]
 
 describe("apex", function()
-	local apex = require("sf.apex")
+	local apex = require("salesforcedx.apex")
 
 	describe("valid apex test class", function()
 		local bufnr
