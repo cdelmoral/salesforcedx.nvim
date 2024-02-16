@@ -19,7 +19,7 @@ public class MyTest {
 ]]
 
 describe("execute_test_method", function()
-	local sf = require("sf")
+	local sf = require("salesforcedx")
 
 	before_each(function()
 		create_buffer_with_content(test_class)
