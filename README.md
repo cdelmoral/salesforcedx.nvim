@@ -3,11 +3,11 @@
 ## High Priority
 
 - [x] Run apex class/method test
+- [x] Deploy local changes to org
 - [ ] Status line function for scratch org user
 - [ ] Create apex class/apex trigger/apex unit test class/lwc
 - [ ] Display default org details
 - [ ] Open default org
-- [ ] Pull/push source from/to default org
 - [ ] Set default org
 - [ ] Validate sf/sfdx is installed
 - [ ] Validate it is apex file
@@ -16,6 +16,7 @@
 ## Low Priority
 
 - [ ] Run apex test suite
+- [ ] Retrieve remote changes from org
 
 ## Possible names
 

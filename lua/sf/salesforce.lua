@@ -17,4 +17,8 @@ function salesforce.get_apex_run_test(class_name, method_name)
 	return command
 end
 
+function salesforce.get_project_deploy_start()
+	return { "sf", "project", "deploy", "start" }
+end
+
 return salesforce
