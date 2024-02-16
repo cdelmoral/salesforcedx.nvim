@@ -52,9 +52,16 @@ M.execute_test_method = function()
 	utils.execute_command(test_command, bufnr)
 end
 
+M.deploy_start = function()
+	local command = salesforce.get_project_deploy_start()
+	local bufnr = utils.create_split()
+	utils.execute_command(command, bufnr)
+end
+
 M.setup = function()
 	vim.api.nvim_command("command! TestMethod lua require'sf'.execute_test_method()<CR>")
 	vim.api.nvim_command("command! TestClass lua require'sf'.execute_test_class()<CR>")
+	vim.api.nvim_command("command! Deploy lua require'sf'.deploy_start()<CR>")
 end
 
 return M
