@@ -18,7 +18,7 @@ public class MyTest {
 }
 ]]
 
-describe("execute_test_method", function()
+describe("execute_test_class", function()
 	local sf = require("sf")
 
 	before_each(function()
@@ -26,14 +26,14 @@ describe("execute_test_method", function()
 		vim.cmd("set filetype=apex")
 	end)
 
-	it("runs test method", function()
+	it("runs test class", function()
 		stub(vim.fn, "jobstart")
 
 		vim.api.nvim_win_set_cursor(0, { 4, 1 })
-		sf.execute_test_method()
+		sf.execute_test_class()
 
 		assert.stub(vim.fn.jobstart).was_called()
-		local expected_command = "sf apex run test --tests MyTest.myTestMethod1 --wait 15"
+		local expected_command = "sf apex run test --class-names MyTest --wait 15"
 		assert.stub(vim.fn.jobstart).was_called_with(vim.split(expected_command, " "), match._)
 	end)
 end)

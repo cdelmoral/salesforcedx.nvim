@@ -1,20 +1,21 @@
 # sf.nvim
 
-## Roadmap
+## High Priority
 
-- Status line function for scratch org user
-- Create apex class/apex trigger/apex unit test class/lwc
-- Display default org details
-- Open default org
-- Pull/push source from/to default org
-- Run apex test suite/apex tests
-- Set default org
+- [x] Run apex class/method test
+- [ ] Status line function for scratch org user
+- [ ] Create apex class/apex trigger/apex unit test class/lwc
+- [ ] Display default org details
+- [ ] Open default org
+- [ ] Pull/push source from/to default org
+- [ ] Set default org
+- [ ] Validate sf/sfdx is installed
+- [ ] Validate it is apex file
+- [ ] Add documentation and types
 
-## TO DO
+## Low Priority
 
-- Validate sf/sfdx is installed
-- Validate it is apex file
-- Add documentation and types
+- [ ] Run apex test suite
 
 ## Possible names
 
