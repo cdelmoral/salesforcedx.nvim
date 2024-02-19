@@ -1,4 +1,5 @@
 local stub = require("luassert.stub")
+local mock = require("luassert.mock")
 local match = require("luassert.match")
 
 local create_buffer_with_content = function(input)
@@ -20,10 +21,18 @@ public class MyTest {
 
 describe("deploy_start", function()
 	local sf = require("salesforcedx")
+	local vim_fn_mock = mock(vim.fn)
 
 	before_each(function()
 		create_buffer_with_content(test_class)
 		vim.cmd("set filetype=apex")
+		vim_fn_mock.filereadable = function()
+			return 1
+		end
+	end)
+
+	after_each(function()
+		mock.revert(vim_fn_mock)
 	end)
 
 	it("runs project deploy start command", function()

@@ -1,5 +1,6 @@
 local stub = require("luassert.stub")
 local match = require("luassert.match")
+local mock = require("luassert.mock")
 
 local create_buffer_with_content = function(input)
 	local buf = vim.api.nvim_create_buf(false, true)
@@ -20,10 +21,18 @@ public class MyTest {
 
 describe("execute_test_class", function()
 	local sf = require("salesforcedx")
+	local vim_fn_mock = mock(vim.fn)
 
 	before_each(function()
 		create_buffer_with_content(test_class)
 		vim.cmd("set filetype=apex")
+		vim_fn_mock.filereadable = function()
+			return 1
+		end
+	end)
+
+	after_each(function()
+		mock.revert(vim_fn_mock)
 	end)
 
 	it("runs test class", function()
