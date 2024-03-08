@@ -7,6 +7,10 @@ similar to the
 [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-core)
 plugin, but for your favorite code editor.
 
+<p align="center">
+  <img src="assets/salesforcedx.gif" alt="Demo">
+</p>
+
 ## Prerequisites
 
 - A [NerdFont](https://www.nerdfonts.com/) (optional, but needed to display
@@ -40,11 +44,7 @@ You can install salesforcedx.nvim with any plugin manager.
 ## Usage
 
 salesforcedx.nvim provides the `SalesforceDX` command that opens the Salesforce
-command palette:
-
-<p align="center">
-  <img src="assets/salesforcedx.gif" alt="Demo">
-</p>
+command palette.
 
 You can also configure key mappings to execute the Salesforce commands, for
 example:
